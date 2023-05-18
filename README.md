@@ -16,3 +16,11 @@ El UUID (Universal Unique Identifier) es un formato que nos sirve como identific
 Por qué es una buena opción usar uuid y no un id autonumérico:
 
 Aunque se utilicen varias tables, bases de datos y servidores las UUID seran diferentes. Si se trabaja en paralelo es posible unir registros o tablas enteras sin generar un conflicto por claves duplicadas. Aun trabajando en una misma base de datos la tarea de la creación de la clave puede generarse de manera paralela.
+
+---------------------------------------
+Qué es el parámetro de Salt Rounds de la librería bcryptjs.
+
+
+Salt es una cadena aleatoria que se añade a la contraseña antes de aplicar la función de hashing, lo que significa que incluso si dos usuarios tienen la misma contraseña, los valores hash almacenados en la base de datos serán diferentes debido a las sales únicas.
+
+El parámetro de Salt Rounds determina la cantidad de veces que se aplica la función de hashing con sal a la contraseña antes de almacenarla en la base de datos. 
